@@ -1,3 +1,8 @@
-{{recipe-listing recipe=model}}
-
-<h3>{{#link-to "recipes.show" recipe}}{{recipe.title}}{{/link-to}}<small>{{#link-to "recipes.edit" recipe class="btn btn-default btn-sm"}}Edit{{/link-to}}</small></h3>
+{{#recipe-listing recipe=model}}
+    <h3>Ingredients</h3>
+    <dl class="dl-horizontal">
+      {{#each model.ingredients as |ingredient|}}
+        <dd>{{ingredient.description}}</dd>
+      {{/each}}
+    </dl>
+{{/recipe-listing}}
