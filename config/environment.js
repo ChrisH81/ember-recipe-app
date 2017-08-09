@@ -21,7 +21,12 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+    firebase: {
+      apiKey: 'xyz',
+      authDomain: "recipe-app-4ebcb.firebaseapp.com",
+      databaseURL: "https://recipe-app-4ebcb.firebaseio.com",
+    },
   };
 
   if (environment === 'development') {
