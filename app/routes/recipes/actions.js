@@ -3,12 +3,12 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   actions: {
     save(model){
-      model.save()
-        .then((model) => this.transitionTo('recipes.show', model))
-        .catch(e => {
-          console.log(e.errors);
-        });
-    },
+          this.currentModel.save()
+            .then((model) => this.transitionTo("recipes.show", model))
+            .catch(e => {
+              console.log(e.errors);
+            });
+        },
 
     willTransition() {
 
