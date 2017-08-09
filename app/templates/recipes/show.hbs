@@ -13,4 +13,5 @@
       {{/each}}
     </dl>
     <small>{{#link-to "recipes.edit" model class="btn btn-default btn-sm"}}Edit{{/link-to}}</small>
+    <button class="btn btn-danger"  {{action 'removeRecipe' recipe}}>Remove Recipe</button>
 {{/recipe-listing}}

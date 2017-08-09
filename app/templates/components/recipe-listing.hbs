@@ -1,5 +1,5 @@
 <article class="listing">
-  <h3>{{recipe.title}}</h3>
+    <h3>{{#link-to "recipes.show" recipe}}{{recipe.title}}{{/link-to}}</h3>
   <p>
     {{recipe.description}}
   </p>
@@ -15,7 +15,6 @@
       Minutes to cook
     </dt>
     <dd>{{recipe.cookTime}}</dd>
-    <h3>{{#link-to "recipes.show" recipe}}{{recipe.title}}{{/link-to}}</h3>
   </dl>
   {{yield}}
 </article>
